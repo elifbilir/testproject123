@@ -71,7 +71,7 @@ public class Vehicles_StepDefinitions {
 
     }
 
-    @And("user selects a vehicle")
+    @And("user selects a vehicle Audi")
     public void userSelectsAVehicle() {
         vehicleCostsPage.vehicleDropdown.click();
         BrowserUtils.waitFor(2);
