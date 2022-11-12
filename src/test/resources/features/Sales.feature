@@ -16,7 +16,7 @@ Feature: Centrilli Sales Functionality feature
     Given As a SalesManager user login with valid email and password
     Given user clicks on Sales button
     Given user clicks on Customers button
-    Given user clicks on Create button
+    Given user clicks on Create button in Customer page
     Given user is on the Customers New page
 
   @CNTR-803
