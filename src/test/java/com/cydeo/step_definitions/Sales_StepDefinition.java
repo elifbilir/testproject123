@@ -49,7 +49,7 @@ public class Sales_StepDefinition {
         System.out.println("customers button clicked");
     }
 
-    @Given("user clicks on Create button")
+    @Given("user clicks on Create button in Customer page")
     public void user_clicks_on_create_button()  {
         BrowserUtils.sleep(2);
         salesPage.customerCreateBtn.click();
