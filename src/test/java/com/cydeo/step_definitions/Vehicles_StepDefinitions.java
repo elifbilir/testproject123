@@ -72,7 +72,7 @@ public class Vehicles_StepDefinitions {
     }
 
     @And("user selects a vehicle Audi")
-    public void userSelectsAVehicle() {
+    public void userSelectsAVehicleAudi() {
         vehicleCostsPage.vehicleDropdown.click();
         BrowserUtils.waitFor(2);
         WebElement audi = Driver.getDriver().findElement(By.linkText("Audi/A1/"));
