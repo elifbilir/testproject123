@@ -71,7 +71,7 @@ public class Vehicles_StepDefinitions {
 
     }
 
-    @And("user selects a vehicle")
+    @And("user chooses a vehicle")
     public void userSelectsAVehicle() {
         vehicleCostsPage.vehicleDropdown.click();
         BrowserUtils.waitFor(2);
@@ -270,60 +270,67 @@ public class Vehicles_StepDefinitions {
 
     }
 
-    @And("user clicks on vehicle costs button")
-    public void userClicksOnVehicleCostsButton() {
+    @And("user clicks audi button")
+    public void userClicksAudiButton() {
+        vehicleCostsPage.audiButton.click();
+    }
+
+    @And("user sees the current number of audi")
+    public void userSeesTheCurrentNumberOfAudi() {
+        BrowserUtils.waitFor(2);
+        vehicleCostsPage.currentAudiNumber.click();
+
+        BrowserUtils.sleep(2);
+        String currentNumber=vehicleCostsPage.currentAudiNumber.getAttribute("innerHTML");
+        BrowserUtils.sleep(2);
+        System.out.println("currentNumber = " + currentNumber);
+        VehicleCostsPage.numBeforeCreatingVehicle= Integer.parseInt(currentNumber);
+        System.out.println(VehicleCostsPage.numBeforeCreatingVehicle);
+
+    }
+
+    @And("user creates new vehicle")
+    public void userCreatesNewVehicle() {
+
+        vehicleCostsPage.createButton.click();
+        BrowserUtils.sleep(2);
+        vehicleCostsPage.vehicleDropdown.click();
+        BrowserUtils.sleep(2);
+        WebElement audi = Driver.getDriver().findElement(By.linkText("Audi/A1/"));
+        audi.click();
+
+
+    }
+
+    @And("user goes back vehicle costs page")
+    public void userGoesBackVehicleCostsPage() {
         vehicleCostsPage.vehicleCostsButton.click();
         BrowserUtils.waitFor(2);
     }
 
-
-    @And("user checks the number of vehicles")
-    public void userChecksTheNumberOfVehicles() {
-
+    @And("user clicks audi button again")
+    public void userClicksAudiButtonAgain() {
         vehicleCostsPage.audiButton.click();
         BrowserUtils.waitFor(2);
-
-        String currentString= vehicleCostsPage.currentNumber.getText();
-
-        System.out.println("currentString = " + currentString);
-
-
     }
 
+    @Then("the number of vehicles increases one")
+    public void theNumberOfVehiclesIncreasesOne() {
+        Assert.assertEquals(VehicleCostsPage.numAfterCreatingVehicle, VehicleCostsPage.numBeforeCreatingVehicle + 1);
 
-    @And("number of the vehicle costs list increased {string}")
-    public void userSeesTheNumberOfTheVehicleCostsListIncreased(String num) {
-
-        vehicleCostsPage.audiButton.click();
-        BrowserUtils.waitFor(2);
-        String newString= vehicleCostsPage.currentNumber.getText();
-        System.out.println("newString = " + newString);
-        System.out.println(" ");
-
-
-
-
+        System.out.println("Number increased 1" );
     }
-
-
-  @Then("user sees the number of the vehicles increased {string}")
-    public void userSeesTheNumberOfTheVehiclesIncreased(String vehicles) {
-
-       String currentString= vehicleCostsPage.currentNumber.getText();
-       String newString= vehicleCostsPage.currentNumber.getText();
-
-
-
-       if(currentString!=newString){
-           System.out.println("The number of vehicles increased 1");
-       }
-
-
-  }
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
