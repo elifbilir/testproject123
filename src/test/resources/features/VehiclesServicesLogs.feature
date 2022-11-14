@@ -42,7 +42,7 @@ Feature: Centrilli Fleet/Vehicles/Vehicles Services Logs Function verifications
   @CNTR-793
   Scenario: page title is changed to the new Service Logs value after user create the Service Logs
     When user clicks on Create button
-    And user selects a vehicle
+    And user selects a vehicle Audi
     And user selects a service type
     And user clicks on Save button
     Then user sees "Audi" in page title
