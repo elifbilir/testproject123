@@ -107,8 +107,7 @@ public class VehicleCostsPage {
     @FindBy(xpath = "(//div//button[@type='button'])[17]")
     public WebElement graph;
 
-    @FindBy(xpath = "//div//span[.='685']")
-    //@FindBy(xpath ="(//div//th[@class='o_group_name'])[1]" )
+    @FindBy(xpath ="(//div//span[@class='o_pager_limit'])[2]" )
     public WebElement currentAudiNumber;
 
     public static int numBeforeCreatingVehicle;

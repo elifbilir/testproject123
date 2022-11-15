@@ -211,8 +211,8 @@ public class Vehicles_StepDefinitions {
         BrowserUtils.waitFor(2);
 
         String actualName = vehicleCostsPage.newAudi.getText();
-        String expectedName="Audi/A1/";
-        Assert.assertEquals(expectedName,actualName);
+        String expectedName = "Audi/A1/";
+        Assert.assertEquals(expectedName, actualName);
 
 
       /*  List<WebElement> lastRowOfTable = Driver.getDriver().findElements(By.xpath("//div//tr[@class='o_group_header o_group_has_content']"));
@@ -251,7 +251,7 @@ public class Vehicles_StepDefinitions {
 
     @When("user clicks on graph button")
     public void userClicksOnGraphButton() {
-       BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(2);
         vehicleCostsPage.graph.click();
         BrowserUtils.waitFor(2);
         String currentUrl = Driver.getDriver().getCurrentUrl();
@@ -270,60 +270,65 @@ public class Vehicles_StepDefinitions {
 
     }
 
-    @And("user clicks on vehicle costs button")
-    public void userClicksOnVehicleCostsButton() {
+
+    @And("user clicks on audi button")
+    public void userClicksOnAudiButton() {
+        vehicleCostsPage.audiButton.click();
+        BrowserUtils.waitFor(2);
+    }
+
+    @And("user creates a vehicle")
+    public void userCreatesAVehicle() {
+        // vehicleCostsPage.currentAudiNumber.click();
+        //  BrowserUtils.waitFor(2);
+
+        String currentAudiNum = vehicleCostsPage.currentAudiNumber.getAttribute("innerHTML");
+        BrowserUtils.waitFor(2);
+        System.out.println("currentAudiNumber = " + currentAudiNum);
+        VehicleCostsPage.numBeforeCreatingVehicle = Integer.parseInt(currentAudiNum);
+        System.out.println(VehicleCostsPage.numBeforeCreatingVehicle);
+
+        vehicleCostsPage.createButton.click();
+        BrowserUtils.waitFor(2);
+        vehicleCostsPage.vehicleDropdown.click();
+        BrowserUtils.waitFor(2);
+        WebElement audi = Driver.getDriver().findElement(By.linkText("Audi/A1/"));
+        audi.click();
+
+
+    }
+
+    @Then("user sees all Customers number increases one")
+    public void userSeesAllCustomersNumberIncreasesOne() {
+
+        vehicleCostsPage.saveButton.click();
+        BrowserUtils.waitFor(2);
         vehicleCostsPage.vehicleCostsButton.click();
         BrowserUtils.waitFor(2);
-    }
-
-
-    @And("user checks the number of vehicles")
-    public void userChecksTheNumberOfVehicles() {
-
         vehicleCostsPage.audiButton.click();
         BrowserUtils.waitFor(2);
-
-        String currentString= vehicleCostsPage.currentNumber.getText();
-
-        System.out.println("currentString = " + currentString);
-
-
-    }
-
-
-    @And("number of the vehicle costs list increased {string}")
-    public void userSeesTheNumberOfTheVehicleCostsListIncreased(String num) {
-
-        vehicleCostsPage.audiButton.click();
+        String newAudiNumber = vehicleCostsPage.currentAudiNumber.getAttribute("innerHTML");
+        System.out.println("newAudiNumber = " + newAudiNumber);
+        VehicleCostsPage.numAfterCreatingVehicle = Integer.parseInt(newAudiNumber);
+        System.out.println(VehicleCostsPage.numAfterCreatingVehicle);
         BrowserUtils.waitFor(2);
-        String newString= vehicleCostsPage.currentNumber.getText();
-        System.out.println("newString = " + newString);
-        System.out.println(" ");
-
-
-
-
+        Assert.assertEquals(VehicleCostsPage.numAfterCreatingVehicle, VehicleCostsPage.numBeforeCreatingVehicle + 1);
+        System.out.println("Number increased 1");
     }
 
 
-  @Then("user sees the number of the vehicles increased {string}")
-    public void userSeesTheNumberOfTheVehiclesIncreased(String vehicles) {
+    @And("user chooses a vehicle")
+    public void userChoosesAVehicle() {
+        vehicleCostsPage.vehicleDropdown.click();
+        BrowserUtils.waitFor(2);
+        WebElement audi = Driver.getDriver().findElement(By.linkText("Audi/A1/"));
+        audi.click();
 
-       String currentString= vehicleCostsPage.currentNumber.getText();
-       String newString= vehicleCostsPage.currentNumber.getText();
-
-
-
-       if(currentString!=newString){
-           System.out.println("The number of vehicles increased 1");
-       }
-
-
-  }
-
-
-
+    }
 }
+
+
+
 
 
 

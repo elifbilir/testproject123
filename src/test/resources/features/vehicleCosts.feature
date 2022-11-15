@@ -130,13 +130,14 @@ Scenario: vehicles number increases one after creating a new vehicle
   When user clicks on more button
   And user clicks fleet button
   And user clicks Vehicle Costs button
-  And user clicks audi button
-  And user sees the current number of audi
-  And user creates new vehicle
-  And user goes back vehicle costs page
-  And user clicks audi button again
-  Then the number of vehicles increases one
-
+  And user clicks on audi button
+  And user clicks create button
+  And user chooses a vehicle
+  And user clicks on save button
+  And user clicks Vehicle Costs button
+  And user clicks on audi button
+  And user creates a vehicle
+  Then user sees all Customers number increases one
 
 
 
