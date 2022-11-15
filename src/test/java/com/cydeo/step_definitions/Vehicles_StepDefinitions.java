@@ -304,7 +304,7 @@ public class Vehicles_StepDefinitions {
         vehicleCostsPage.saveButton.click();
         BrowserUtils.waitFor(2);
         vehicleCostsPage.vehicleCostsButton.click();
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(1);
         vehicleCostsPage.audiButton.click();
         BrowserUtils.waitFor(2);
         String newAudiNumber = vehicleCostsPage.currentAudiNumber.getAttribute("innerHTML");
