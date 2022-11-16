@@ -16,30 +16,9 @@ import org.openqa.selenium.WebElement;
 
 public class Vehiclemodel_StepDefinition {
     LoginPage loginPage = new LoginPage();
-
-    @Given("user logins as posmanager")
-    public void userLoginsAsPosmanager() {
-        String username = ConfigurationReader.getProperty("username");
-        String password = ConfigurationReader.getProperty("password");
-        loginPage.login(username, password);
-        BrowserUtils.sleep(3);
-
-    }
-    
     VehiclemodelPage vehiclemodelPage = new VehiclemodelPage();
 
-    @Given("user clicks Fleet button")
-    public void user_clicks_fleet_button() {
-        BrowserUtils.sleep(3);
-        if(vehiclemodelPage.Fletutton.isDisplayed()){
-            vehiclemodelPage.Fletutton.click();
-        }else{
-            vehiclemodelPage.Morebtn.click();
-            vehiclemodelPage.Fletutton.click();
-        }
-        BrowserUtils.sleep(3);
-    }
-
+//
     @Given("user clicks Vehicle Model button")
     public void user_clicks_vehicle_model_button() {
         BrowserUtils.sleep(3);
@@ -200,6 +179,10 @@ public class Vehiclemodel_StepDefinition {
         BrowserUtils.sleep(2);
         Assert.assertEquals(vehiclemodelPage.numberAfter, vehiclemodelPage.numberBefore + 1);
         System.out.println("Number increased 1 ");
+    }
+
+    @When("user enter Make button")
+    public void userEnterMakeButton() {
     }
 }
 

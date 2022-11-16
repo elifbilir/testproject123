@@ -20,7 +20,7 @@ Feature: Centrilli app Vehicle Model feature
     And  user click on the create button
     And  user click save button
     Then user should see error message
-
+@Wip
   Scenario: verify that the Attachment and Action button are displayed at the top of the page
     When user click on the create button
     And  user fill in a model name field
