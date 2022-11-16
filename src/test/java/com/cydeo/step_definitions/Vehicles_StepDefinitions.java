@@ -156,7 +156,7 @@ public class Vehicles_StepDefinitions {
     @And("user clicks on ok button")
     public void userClicksOnOkButton() {
         vehicleCostsPage.okButton.click();
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(1);
 
     }
 
