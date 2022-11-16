@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class VehiclePage {
-    public VehiclePage(){
+public class VehiclemodelPage {
+    public VehiclemodelPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -14,7 +14,7 @@ public class VehiclePage {
     public WebElement Morebtn;
 
     @FindBy(xpath = "//a[@data-menu=\"134\"]")
-    public  WebElement FleetButton;
+    public  WebElement Fletutton;
 
     @FindBy(xpath = "//a[@data-menu=\"136\"]")
     public WebElement VehicleModelBtn;
@@ -59,6 +59,28 @@ public class VehiclePage {
     public WebElement ABCDbutton;
 
 
-    ////
+
+    // test last
+    @FindBy(xpath = "//span[@class=\"o_pager_limit\"]")
+    public WebElement customerNumber;
+
+    @FindBy(xpath = "//a[@data-menu-xmlid=\"fleet.fleet_vehicle_model_brand_menu\"]/span")
+    public WebElement modelMakeVehbtn;
+
+    @FindBy(xpath = "//input[@class=\"o_field_char o_field_widget o_input o_required_modifier\"]")
+    public WebElement modelMakeSearch;
+
+    @FindBy(xpath = "//button[@class=\"btn btn-primary btn-sm o-kanban-button-new btn-default\"]")
+    public WebElement modelMakeCreatebtn;
+
+    @FindBy(xpath = "//button[@class=\"btn btn-primary btn-sm o_form_button_save\"]")
+    public WebElement modelMakeSavebtn;
+
+    public static int numberBefore;
+
+    public static int numberAfter;
+
+
+
 
 }
