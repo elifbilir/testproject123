@@ -35,7 +35,7 @@ Feature: Centrilli app Vehicle Model feature
     And user fill "ABCD" to the search box and hit the enter key
     Then user should see the new created Vehicle Model value
 
-
+@Wip
   Scenario: Verify that the user has changed the Vehicle Model page number with the arrow
     When user enter Make button
     And  user click on the right and left arrow
