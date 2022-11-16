@@ -124,24 +124,20 @@ Feature: Create vehicle costs
     Then user sees the vehicles costs as "list"
 
 
-@wip
-  Scenario: create a vehicle cost
-    Given : user is already logged in and on main page
-    When user clicks on more button
-    And user clicks fleet button
-    And user clicks Vehicle Costs button
-    And user checks the number of vehicles
-    And user clicks create button
-    And user sees the title New Odoo
-    And user selects a vehicle
-    And user selects a type
-    And user selects a date
-    And user enters total price
-    And user enters cost description
-    And user clicks on save button
-    And user clicks on vehicle costs button
-    And number of the vehicle costs list increased "1"
-    Then user sees the number of the vehicles increased "1"
+@wip_elif
+Scenario: vehicles number increases one after creating a new vehicle
+  Given : user is already logged in and on main page
+  When user clicks on more button
+  And user clicks fleet button
+  And user clicks Vehicle Costs button
+  And user clicks on audi button
+  And user clicks create button
+  And user chooses a vehicle
+  And user clicks on save button
+  And user clicks Vehicle Costs button
+  And user clicks on audi button
+  And user creates a vehicle
+  Then user sees all Customers number increases one
 
 
 
