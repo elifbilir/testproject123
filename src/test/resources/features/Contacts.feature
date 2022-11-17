@@ -18,11 +18,8 @@ Feature: Centrilli Contact Feature verifications
     When user clicks on Create button
     Then user sees the title New Odoo
     And user types "Centrilli User" name input box
-    Then user sees "Centrilli User" in the name input box
     And user types "Cybertek" company input box
-    Then user sees "Cybertek" in the company input box
     And user types "newcontact@centrilli.com" email input box
-    Then user sees "newcontact@centrilli.com" in the email input box
     And user clicks on Save button
     Then user should see the title "Cybertek, Centrilli User" Odoo
 
