@@ -8,12 +8,14 @@ Feature: Centrilli Contact Feature verifications
   4. Verify that the user can edit contact
   5. Verify that the user can delete contact
 
+
   Background: For the scenarios in the feature file, user is expected to be on Contacts page
     Given user is on the centrilli login page
     Given user logins as posmanager
     Given user clicks Contacts button
     Given user is on the Contacts page
 
+  @Cnt
   Scenario: the user can create new contact
     When user clicks on Create button
     Then user sees the title New Odoo
