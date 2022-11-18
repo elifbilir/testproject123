@@ -1,5 +1,6 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.LoginPage;
 import com.cydeo.pages.VehicleCostsPage;
 import com.cydeo.pages.VendorBillsPage;
 import com.cydeo.utilities.BrowserUtils;
@@ -21,21 +22,24 @@ public class VendorBills_StepDefinition {
     VehicleCostsPage vehicleCostsPage = new VehicleCostsPage();
     VendorBillsPage vendorBillsPage = new VendorBillsPage();
 
+    LoginPage loginPage=new LoginPage();
 
-    @Given("user is logged as POS Manager")
-    public void userIsLoggedAsPOSManager() {
+
+    @When("user is logged as POS Manager")
+   public void  userIsLoggedAsPOSManager() {
         // Getting our login method to log in to web table app
         Driver.getDriver().get(ConfigurationReader.getProperty("cent-url"));
 
         //Calling our login method to log in to web table app
         vehicleCostsPage.login();
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
+
 
     }
 
-   /* @Given("user clicks on Purchases button")
+    @Given("user clicks on Purchases button")
     public void userClicksOnPurchasesButton(){
-        vendorBillsPage.purchaseButton.click();
+        vendorBillsPage.clickPurchaseButton();
         BrowserUtils.waitFor(2);
     }
 
@@ -43,20 +47,8 @@ public class VendorBills_StepDefinition {
     public void userClicksOnVendorBillsButton() {
         vendorBillsPage.clickVendorBillsButton();
         BrowserUtils.waitFor(1);
-    }*/
-
-
-    @When("user clicks on Purchases button")
-    public void userClicksOnPurchasesButton() {
-        vendorBillsPage.purchaseButton.click();
-        BrowserUtils.waitFor(2);
     }
 
-    @When("user clicks on Vendor Bills button")
-    public void userClicksOnVendorBillsButton() {
-        vendorBillsPage.vendorBillsButton.click();
-        BrowserUtils.waitFor(2);
-    }
 
     @When("user clicks on create button")
     public void userClicksOnCreateButton() {

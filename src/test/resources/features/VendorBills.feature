@@ -8,15 +8,14 @@ Verify that the user can edit Vendor Bill
 Verify that the user can delete Vendor Bill
 
 
-  Background: User is logged in
+  Background:User is logged in
       Given user is logged as POS Manager
-
+      When user clicks on Purchases button
+      When user clicks on Vendor Bills button
 
 
 @elif
   Scenario:user can create new  Vendor Bill
-      When user clicks on Purchases button
-      When user clicks on Vendor Bills button
       When user clicks on create button
       And user selects a vendor "<Vendor>"
       And user enters a vendor reference "<Vendor Reference>"

@@ -12,16 +12,16 @@ public class VendorBillsPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-   /* public void clickPurchaseButton(){
-
+    public void clickPurchaseButton(){
         this.purchaseButton.click();
         BrowserUtils.waitFor(2);
     }
 
+
     public void clickVendorBillsButton(){
         this.vendorBillsButton.click();
         BrowserUtils.waitFor(2);
-    }*/
+    }
 
     @FindBy(xpath = "//li//a[@data-menu-xmlid='purchase.menu_purchase_root']")
     public WebElement purchaseButton;
@@ -44,7 +44,6 @@ public class VendorBillsPage {
    @FindBy(xpath = "//td//input[@name='reference']")
     public WebElement vendorReference;
 
-
    @FindBy(xpath="(//div[@class='o_input_dropdown'])[2]")
     public WebElement orderButton;
 
@@ -59,8 +58,6 @@ public class VendorBillsPage {
    @FindBy(xpath = "//div//button[@accesskey='s']")
     public WebElement saveButton;
 
-   @FindBy(xpath = "//body[@class='o_web_client']")
-    public WebElement warningMessage;
 
 
 
