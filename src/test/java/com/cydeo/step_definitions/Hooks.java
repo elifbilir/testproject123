@@ -10,17 +10,17 @@ import org.openqa.selenium.TakesScreenshot;
 public class Hooks {
 
 
-    @Before(value = "@wip")
+    //@Before(value = "@wip")
     public void runFirst(){
         System.out.println("I will run before wip scenario");
     }
     //
-    @Before(value = "@smoke")
+    //@Before(value = "@smoke")
     public void runAgain(){
         System.out.println("I will run before smoke scenario");
     }
 
-    @After
+    //@After
     public void teardownScenario(Scenario scenario){
 
         //scenario.isFailed() --> if scenario fails this method will return TRUE boolean value
@@ -35,7 +35,7 @@ public class Hooks {
 
 
         //BrowserUtils.sleep(5);
-        Driver.closeDriver();
+       // Driver.closeDriver();
 
         //System.out.println("====Closing browser using cucumber @After");
         //System.out.println("====Scenario ended/ Take screenshot if failed!");

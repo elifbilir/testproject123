@@ -1,4 +1,4 @@
-
+@smoke
 Feature: POS Manager should be able to create new Point Of Sale Configuration
 
   Acceptance Criteria:
@@ -12,14 +12,15 @@ Feature: POS Manager should be able to create new Point Of Sale Configuration
   Background: User is logged in
     Given user is logged in the application
 
-  @wip_guvanch
+
   Scenario Outline: user can create new  Point Of Sale
     When user clicks the Point of Sale module
     And user clicks the List button
     And user clicks the Create button
     And user enters the "<name>" in the name box
     And user chooses the Operation Type
-    Then user clicks the Save button
+    And user clicks the Save button
+    Then user should see name as a title
     Examples: Details below
       | name       |
       | Lightspeed |
@@ -35,12 +36,12 @@ Feature: POS Manager should be able to create new Point Of Sale Configuration
     When user clicks the Point of Sale module
     And user clicks the List button
     And user clicks the Create button
-    And user enters the "random" in the name box
+    And user enters the random name in the box
     And user clicks the Discard button
     And user clicks OK to the Warning popup message
     Then user is on the Point of Sale module
 
-
+@pos
   Scenario Outline: user can edit  Point Of Sale
     When user clicks the Point of Sale module
     And user clicks the List button
@@ -48,7 +49,7 @@ Feature: POS Manager should be able to create new Point Of Sale Configuration
     And user clicks the "<expected name>"
     And user clicks the Edit button
     And user re-enters the "<new name>" name
-    Then user clicks the Save button
+    Then user clicks the save button
     Examples: Details below
       | name       | expected name | new name |
       | Lightspeed | Lightspeed    | Shopify  |
@@ -66,7 +67,7 @@ Feature: POS Manager should be able to create new Point Of Sale Configuration
     When user clicks the Point of Sale module
     And user clicks the List button
     And user clicks the Create button
-    And user enters the "random" in the name box
+    And user enters the random name in the box
     And user clicks the Save button
     Then user sees the The following fields are invalid error message
 
