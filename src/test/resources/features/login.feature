@@ -1,4 +1,4 @@
-@smoke
+
 Feature: Centrilli app login feature
   User Story:
   As a user, I should be able to login with correct credentials accounts.
