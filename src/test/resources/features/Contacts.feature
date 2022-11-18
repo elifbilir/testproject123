@@ -25,15 +25,16 @@ Feature: Centrilli Contact Feature verifications
     And user clicks on Save button
     Then user should see the title "Cybertek, Centrilli User" Odoo
 
-  Scenario: the user can switch Kanban-List view
-    When user displays Contacts page in "Kanban" mode
-    And user clicks on List button
-    Then user should be able to display Contacts page in "List" mode
 
+  Scenario: the user can switch Kanban-List view
+    When user displays Contacts page in "kanban" mode
+    And user clicks on List button
+    Then user should be able to display Contacts page in "list" mode
+
+  @Cnt
   Scenario: the user can discard changes
     When user clicks on Create button
     And user types "Centrilli User" name input box
-    And user sees "Cybertek" in the company input box
     Then user clicks on Discard button
     And user should see the warning popup window
     And user clicks on ok button
