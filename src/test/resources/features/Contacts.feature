@@ -41,29 +41,29 @@ Feature: Centrilli Contact Feature verifications
     And user clicks on ok button
     Then user should be on the Contacts page
 
-  Scenario: the user can edit contact
-    When user types "Centrilli User" to the search box and hits the enter key
-    Then user should see the contact that named "Centrilli User"
-    And user clicks on contact "Centrilli User"
-    Then user should see the title "Cybertek, Centrilli User" Odoo
-    And user clicks on Edit button
-    Then user cleans the company input box
-    And user types "Cydeo" company input box and hits the enter key
-    And user sees the warning popup window
-    And user clicks on ok button
-    And user clicks on Save button
-    Then user should see the title "Cydeo, Centrilli User" Odoo
-
-  Scenario: the user can delete contact
-    When user types "Centrilli User" to the search box and hits the enter key
-    Then user should see the contact that named "Centrilli User"
-    And user clicks on contact "Centrilli User"
-    And user clicks on Action button
-    Then user sees Action dropdown menu
-    And user clicks Delete on dropdown menu
-    Then user sees confirmation popup window
-    And user clicks on ok button
-    Then user should NOT see  the contact "Centrilli User" on the contact page
+#  Scenario: the user can edit contact
+#    When user types "Centrilli User" to the search box and hits the enter key
+#    Then user should see the contact that named "Centrilli User"
+#    And user clicks on contact "Centrilli User"
+#    Then user should see the title "Cybertek, Centrilli User" Odoo
+#    And user clicks on Edit button
+#    Then user cleans the company input box
+#    And user types "Cydeo" company input box and hits the enter key
+#    And user sees the warning popup window
+#    And user clicks on ok button
+#    And user clicks on Save button
+#    Then user should see the title "Cydeo, Centrilli User" Odoo
+#
+#  Scenario: the user can delete contact
+#    When user types "Centrilli User" to the search box and hits the enter key
+#    Then user should see the contact that named "Centrilli User"
+#    And user clicks on contact "Centrilli User"
+#    And user clicks on Action button
+#    Then user sees Action dropdown menu
+#    And user clicks Delete on dropdown menu
+#    Then user sees confirmation popup window
+#    And user clicks on ok button
+#    Then user should NOT see  the contact "Centrilli User" on the contact page
 
 
 
