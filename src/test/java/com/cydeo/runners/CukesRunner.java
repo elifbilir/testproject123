@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = "com/cydeo/step_definitions",// glue gives path to the package of the step_definitions
         publish = true,
         dryRun = false,
-        tags = "@pos"
+        tags = ""
 )
 public class CukesRunner {
 }
