@@ -16,7 +16,7 @@ Feature: Centrilli Contact Feature verifications
     Given user clicks Contacts button
     Given user is on the Contacts page
 
-  @Cnt
+
   Scenario: the user can create new contact
     When user clicks on Create button
     Then user sees the title New Odoo
@@ -26,13 +26,13 @@ Feature: Centrilli Contact Feature verifications
     And user clicks on Save button
     Then user should see the title "Cybertek, Centrilli User" Odoo
 
-  @Cnt
+
   Scenario: the user can switch Kanban-List view
     When user displays Contacts page in "kanban" mode
     And user clicks on List button
     Then user should be able to display Contacts page in "list" mode
 
-  @Cnt
+
   Scenario: the user can discard changes
     When user clicks on Create button
     And user types "Centrilli User" name input box

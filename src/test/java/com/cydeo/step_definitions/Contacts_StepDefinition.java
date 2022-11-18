@@ -7,7 +7,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 
 public class Contacts_StepDefinition {
     ContactsPage contactsPage = new ContactsPage();
@@ -55,19 +54,19 @@ public class Contacts_StepDefinition {
     }
     @When("user displays Contacts page in {string} mode")
     public void user_displays_contacts_page_in_mode(String string) {
-        String currentUrl = Driver.getDriver().getCurrentUrl();
+        String contactsPageUrl = Driver.getDriver().getCurrentUrl();
         BrowserUtils.sleep(2);
         System.out.println(Driver.getDriver().getCurrentUrl());
-        Assert.assertTrue(currentUrl.contains(string));
+        Assert.assertTrue(contactsPageUrl.contains(string));
         BrowserUtils.sleep(2);
 
     }
     @Then("user should be able to display Contacts page in {string} mode")
     public void user_should_be_able_to_display_contacts_page_in_mode(String string) {
-        String currentUrl = Driver.getDriver().getCurrentUrl();
+        String contactsPageUrl = Driver.getDriver().getCurrentUrl();
         BrowserUtils.sleep(2);
         System.out.println(Driver.getDriver().getCurrentUrl());
-        Assert.assertTrue(currentUrl.contains(string));
+        Assert.assertTrue(contactsPageUrl.contains(string));
         BrowserUtils.sleep(2);
     }
     @Then("user should see the warning popup window")
