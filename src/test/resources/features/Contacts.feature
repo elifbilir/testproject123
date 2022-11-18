@@ -1,3 +1,4 @@
+
 Feature: Centrilli Contact Feature verifications
 
   Acceptance Criterias:
@@ -25,7 +26,7 @@ Feature: Centrilli Contact Feature verifications
     And user clicks on Save button
     Then user should see the title "Cybertek, Centrilli User" Odoo
 
-
+  @Cnt
   Scenario: the user can switch Kanban-List view
     When user displays Contacts page in "kanban" mode
     And user clicks on List button
@@ -53,7 +54,7 @@ Feature: Centrilli Contact Feature verifications
     And user clicks on Save button
     Then user should see the title "Cydeo, Centrilli User" Odoo
 
-  Scenario:
+  Scenario: the user can delete contact
     When user types "Centrilli User" to the search box and hits the enter key
     Then user should see the contact that named "Centrilli User"
     And user clicks on contact "Centrilli User"

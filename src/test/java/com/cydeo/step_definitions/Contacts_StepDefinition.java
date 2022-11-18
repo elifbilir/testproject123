@@ -58,18 +58,15 @@ public class Contacts_StepDefinition {
         String currentUrl = Driver.getDriver().getCurrentUrl();
         BrowserUtils.sleep(2);
         System.out.println(Driver.getDriver().getCurrentUrl());
-        BrowserUtils.sleep(2);
         Assert.assertTrue(currentUrl.contains(string));
         BrowserUtils.sleep(2);
 
     }
     @Then("user should be able to display Contacts page in {string} mode")
     public void user_should_be_able_to_display_contacts_page_in_mode(String string) {
-        BrowserUtils.sleep(2);
         String currentUrl = Driver.getDriver().getCurrentUrl();
         BrowserUtils.sleep(2);
         System.out.println(Driver.getDriver().getCurrentUrl());
-        BrowserUtils.sleep(2);
         Assert.assertTrue(currentUrl.contains(string));
         BrowserUtils.sleep(2);
     }
