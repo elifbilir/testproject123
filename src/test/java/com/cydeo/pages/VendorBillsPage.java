@@ -12,6 +12,8 @@ public class VendorBillsPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
+
     public void clickPurchaseButton(){
         this.purchaseButton.click();
         BrowserUtils.waitFor(2);
@@ -23,6 +25,8 @@ public class VendorBillsPage {
         BrowserUtils.waitFor(2);
     }
 
+
+
     @FindBy(xpath = "//li//a[@data-menu-xmlid='purchase.menu_purchase_root']")
     public WebElement purchaseButton;
 
@@ -32,12 +36,15 @@ public class VendorBillsPage {
    @FindBy(xpath = "//div//button[@accesskey='c']")
     public WebElement createButton;
 
+   @FindBy(xpath = "//body[@class='o_web_client']")
+   public WebElement warningMessage;
 
-   @FindBy(xpath = "(//div//input[@class='o_input ui-autocomplete-input'])[1]")
+
+   @FindBy(xpath = "//input[@class='o_input ui-autocomplete-input']")
     public WebElement vendorDropdown;
 
 
-   @FindBy(linkText = "&*&*)_(, aulaya dxlekg")
+   @FindBy(linkText = "&*&*)_(, azjprm jftwid")
     public WebElement selectedVendor;
 
 
@@ -57,6 +64,55 @@ public class VendorBillsPage {
 
    @FindBy(xpath = "//div//button[@accesskey='s']")
     public WebElement saveButton;
+
+   @FindBy(xpath = "//button[@accesskey='k']")
+    public WebElement kanban;
+
+   @FindBy(xpath = "//button[@aria-label='list']")
+   public WebElement list;
+
+   @FindBy(xpath = "//div[@class='modal-body']")
+    public WebElement discardConfirmationMessage;
+
+   @FindBy(xpath = "(//div//button[@type='button'])[34]")
+    public WebElement okToDiscard;
+
+
+   @FindBy(xpath = "(//div//label[@class='o_form_label'])[1]")
+    public WebElement draftBill;
+
+   @FindBy(xpath = "//button[@accesskey='a']")
+    public WebElement editButton;
+
+   @FindBy(xpath = "(//input[@type='checkbox'])[4]")
+    public  WebElement checkBox;
+
+   @FindBy(xpath = "//div[@class='btn-group']")
+    public WebElement printAndAction;
+
+   @FindBy(xpath = "(//div[@class='btn-group o_dropdown'])[2]")
+    public WebElement action;
+
+   @FindBy(xpath = "//li//a[@data-index='1']")
+   public WebElement delete;
+
+   @FindBy(xpath = "//button[@class='btn btn-sm btn-primary']")
+    public  WebElement deleteOk;
+
+
+   @FindBy(xpath = "//span[@class='o_pager_limit']")
+    public WebElement billNumber;
+
+
+    public static int billNumBeforeDelete;
+    public static int billNumAfterDelete;
+
+
+
+
+
+
+
 
 
 
