@@ -28,4 +28,19 @@ public class ContactsPage {
     @FindBy(xpath = "//div[5]/div/div/div[1]/h4")
     public WebElement warningPopup;
 
+    @FindBy(xpath = "//strong[@modifiers='{}']/span")
+    public WebElement contact;
+
+    @FindBy(xpath = "//button[@accesskey='a']")
+    public WebElement editButton;
+
+    @FindBy(xpath = "//h4[.]")
+    public WebElement popup;
+
+    @FindBy(xpath = "//div[3]/ul/li[1]/a")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "//div[@class='o_kanban_view o_res_partner_kanban o_kanban_ungrouped o_kanban_nocontent']")
+    public WebElement noContent;
+
 }
