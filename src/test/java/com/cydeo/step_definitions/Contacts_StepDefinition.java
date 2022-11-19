@@ -88,15 +88,11 @@ public class Contacts_StepDefinition {
         Assert.assertTrue(title.contains("Contacts"));
 
     }
-    @Then("user should see the contact that named {string}")
-    public void user_should_see_the_contact_that_named(String string) {
+    @Then("user should see the contact that named {string} and click on it")
+    public void user_should_see_the_contact_that_named_and_click_on_it(String string) {
        String contactName = contactsPage.contact.getText();
        BrowserUtils.sleep(2);
        Assert.assertTrue(contactName.contains(string));
-
-    }
-    @Then("user clicks on contact {string}")
-    public void user_clicks_on_contact(String string) {
         contactsPage.contact.click();
         BrowserUtils.sleep(2);
 
