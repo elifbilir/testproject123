@@ -1,4 +1,4 @@
-
+  @CNTR-844
 Feature: Centrilli Contact Feature verifications
 
   Acceptance Criterias:
@@ -16,7 +16,7 @@ Feature: Centrilli Contact Feature verifications
     Given user clicks Contacts button
     Given user is on the Contacts page
 
-
+  @CNTR-839
   Scenario: the user can create new contact
     When user clicks on Create button
     Then user sees the title New Odoo
@@ -26,13 +26,13 @@ Feature: Centrilli Contact Feature verifications
     And user clicks on Save button
     Then user should see the title "Cybertek, Centrilli User" Odoo
 
-
+  @CNTR-840
   Scenario: the user can switch Kanban-List view
     When user displays Contacts page in "kanban" mode
     And user clicks on List button
     Then user should be able to display Contacts page in "list" mode
 
-
+  @CNTR-841
   Scenario: the user can discard changes
     When user clicks on Create button
     And user types "Centrilli User" name input box
@@ -41,11 +41,10 @@ Feature: Centrilli Contact Feature verifications
     And user clicks on ok button
     Then user should be on the Contacts page
 
-
+  @CNTR-842
   Scenario: the user can edit contact
     When user types "Centrilli User" to the search box and hits the enter key
-    Then user should see the contact that named "Centrilli User"
-    And user clicks on contact "Centrilli User"
+    Then user should see the contact that named "Centrilli User" and click on it
     Then user should see the title "Cybertek, Centrilli User" Odoo
     And user clicks on Edit button
     Then user cleans the company input box
@@ -55,11 +54,10 @@ Feature: Centrilli Contact Feature verifications
     And user clicks on Save button
     Then user should see the title "Cydeo, Centrilli User" Odoo
 
-
+  @CNTR-843
   Scenario: the user can delete contact
     When user types "Centrilli User" to the search box and hits the enter key
-    Then user should see the contact that named "Centrilli User"
-    And user clicks on contact "Centrilli User"
+    Then user should see the contact that named "Centrilli User" and click on it
     And user clicks on Action button
     And user clicks Delete on dropdown menu
     Then user sees the "Confirmation" popup window
