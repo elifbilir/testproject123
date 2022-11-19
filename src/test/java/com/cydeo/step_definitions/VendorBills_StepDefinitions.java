@@ -203,7 +203,7 @@ public class VendorBills_StepDefinitions {
     @And("user clicks action button")
     public void userClicksActionButton() {
         vendorBillsPage.action.click();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(2);
     }
 
 

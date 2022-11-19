@@ -103,6 +103,7 @@ public class VendorBillsPage {
    @FindBy(xpath = "//span[@class='o_pager_limit']")
     public WebElement billNumber;
 
+
     public static int billNumBeforeDelete;
     public static int billNumAfterDelete;
 
