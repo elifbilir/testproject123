@@ -44,6 +44,7 @@ public class Sales_StepDefinition {
 
     @Given("user clicks on Customers button")
     public void user_clicks_on_customers_button() {
+        BrowserUtils.sleep(3 );
         salesPage.customersButton.click();
         BrowserUtils.sleep(3);
         System.out.println("customers button clicked");
@@ -63,6 +64,7 @@ public class Sales_StepDefinition {
         System.out.println("pageTitle = " + pageTitle);
         BrowserUtils.sleep(3);
         Assert.assertTrue(pageTitle.contains("New"));
+
 
     }
 
@@ -157,6 +159,7 @@ public class Sales_StepDefinition {
     public void user_clicks_list_button() {
         BrowserUtils.sleep(2);
         salesPage.listfield.click();
+        System.out.println("List button was clicked");
     }
 
 
@@ -164,6 +167,7 @@ public class Sales_StepDefinition {
     public void verify_that_user_can_change_customers_display_from_kanban_to_list() {
     BrowserUtils.sleep(2);
     salesPage.listNameField.isDisplayed();
+    BrowserUtils.sleep(2);
     System.out.println("Name field is displayed under the List");
     }
 

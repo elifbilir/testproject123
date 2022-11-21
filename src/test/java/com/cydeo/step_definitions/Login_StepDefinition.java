@@ -1,6 +1,7 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.LoginPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -14,6 +15,7 @@ public class Login_StepDefinition {
     @Given("user is on the centrilli login page")
     public void user_is_on_the_centrilli_login_page() {
         String url = ConfigurationReader.getProperty("cent-url");
+        BrowserUtils.sleep(2);
         Driver.getDriver().get(url);
     }
     @When("user enter valid email and password")
