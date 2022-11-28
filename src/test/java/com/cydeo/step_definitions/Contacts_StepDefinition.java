@@ -119,11 +119,11 @@ public class Contacts_StepDefinition {
     @Then("user sees the {string} popup window")
     public void user_sees_the_popup_window(String string) {
         contactsPage.popup.isDisplayed();
-        BrowserUtils.sleep(2);
-        String popupTitle = contactsPage.popup.getText();
         BrowserUtils.sleep(3);
+        String popupTitle = contactsPage.popup.getText();
+        BrowserUtils.sleep(5);
         System.out.println("popupTitle = " + popupTitle);
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(5);
         Assert.assertTrue(popupTitle.contains(string));
 
     }
