@@ -24,7 +24,7 @@ public class Contacts_StepDefinition {
     public void user_is_on_the_contacts_page() {
         String title = Driver.getDriver().getTitle();
         System.out.println("title = " + title);
-        BrowserUtils.sleep(3);
+        BrowserUtils.sleep(5);
         Assert.assertTrue(title.contains("Contacts"));
     }
 
