@@ -112,18 +112,18 @@ public class Contacts_StepDefinition {
     @Then("user types {string} company input box and hits the enter key")
     public void user_types_company_input_box_and_hits_the_enter_key(String string) {
         contactsPage.companyInputBox.sendKeys(string);
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(5);
         contactsPage.companyInputBox.sendKeys(Keys.ENTER);
 
     }
     @Then("user sees the {string} popup window")
     public void user_sees_the_popup_window(String string) {
         contactsPage.popup.isDisplayed();
-        BrowserUtils.sleep(3);
+        BrowserUtils.sleep(5);
         String popupTitle = contactsPage.popup.getText();
         BrowserUtils.sleep(5);
         System.out.println("popupTitle = " + popupTitle);
-        BrowserUtils.sleep(5);
+        BrowserUtils.sleep(3);
         Assert.assertTrue(popupTitle.contains(string));
 
     }
