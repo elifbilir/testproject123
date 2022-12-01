@@ -28,7 +28,7 @@ public class VehiclesServicesLogs_StepDefinition {
         String password = ConfigurationReader.getProperty("posmanagerpassword");
         loginPage.login(username,password);
 
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(5);
         }
 
     VehiclesServicesLogsPage vehiclesServicesLogsPage = new VehiclesServicesLogsPage();
