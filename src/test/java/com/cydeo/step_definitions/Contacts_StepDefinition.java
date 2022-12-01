@@ -23,6 +23,7 @@ public class Contacts_StepDefinition {
     @Given("user is on the Contacts page")
     public void user_is_on_the_contacts_page() {
         String title = Driver.getDriver().getTitle();
+        BrowserUtils.sleep(5);
         System.out.println("title = " + title);
         BrowserUtils.sleep(5);
         Assert.assertTrue(title.contains("Contacts"));
@@ -106,7 +107,7 @@ public class Contacts_StepDefinition {
     @Then("user cleans the company input box")
     public void user_cleans_the_company_input_box() {
         contactsPage.companyInputBox.clear();
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(5);
 
     }
     @Then("user types {string} company input box and hits the enter key")
